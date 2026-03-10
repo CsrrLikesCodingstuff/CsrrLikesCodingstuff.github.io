@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Click Score Game 🎯</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: arial;
+        margin-top: 100px;
+        background-color: #1a1a2e;
+        color: white;
+      }
+
+      h1 {
+        font-size: 50px;
+      }
+
+      button {
+        font-size: 30px;
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: #e94560;
+        color: white;
+        border: none;
+        border-radius: 10px;
+      }
+
+      button:hover {
+        background-color: #c73652;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Score: <span id="score">0</span></h1>
+    <button onclick="addPoint()">Click me! 🎯</button>
+
+    <script>
+      let score = 0;
+
+      function addPoint() {
+        score = score + 1;
+        document.getElementById("score").innerText = score;
+
+        if (score >= 10) {
+          alert("🏆 YOU WIN! You reached 10 points!");
+        }
+      }
+    </script>
+  </body>
+</html>
